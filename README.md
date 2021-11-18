@@ -7,3 +7,5 @@ Module to claculate and plot mathmatical sequences in a given origin range.
 
 ## Example:
 ```main.py -s n * sin(n) - n ** 2 -r 200 -p True```
+
+This will plot the sequence n * sin(n) - n ** 2 for an input range of `1 to 200`.
