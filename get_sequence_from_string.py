@@ -20,7 +20,7 @@ def get_sequence_from_string(sequence: str, origin_range: int = 100, plot: bool 
     sequence = sequence.replace('^', '**')
 
     values = []
-    for n in range(1, origin_range):
+    for n in range(1, origin_range + 1):
         values.append(eval(sequence))
 
     if plot:
@@ -29,7 +29,7 @@ def get_sequence_from_string(sequence: str, origin_range: int = 100, plot: bool 
         if plot_kwargs is None:
             plot_kwargs = {'label': 'Sequence'}
 
-        plt.plot(values, *plot_args, **plot_kwargs)
+        plt.plot(list(range(1, origin_range + 1)), values, *plot_args, **plot_kwargs)
         plt.show()
 
     if print_values:
